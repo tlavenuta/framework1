@@ -5,8 +5,8 @@ var app = require('http').createServer(handler),
   SerialPort = require('serialport').SerialPort,
   // initialize serialport using the /dev/cu.usbmodem1411 serial port
   // remember to change this string if your arduino is using a different serial port
-  sp = new SerialPort('/dev/cu.usbmodem1411', {
-    baudRate: 115200
+  sp = new SerialPort('COM4', {
+    baudRate: 9600
   }),
   // this var will contain the message string dispatched by arduino
   arduinoMessage = '',
