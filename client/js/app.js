@@ -1,7 +1,7 @@
 (function() {
   'use strict';
   // create a new websocket
-  var socket = io.connect('http://localhost:8000'),
+  var socket = io.connect('http://framework5-tlavenuta.rhcloud.com:8000'),
     // select all the DOM elements needed for this experiment
     $body = $('body'),
     $btn = $('button'),

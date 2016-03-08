@@ -81,8 +81,10 @@ sp.on('open', function() {
 });
 
 // L3T'S R0CK!!!
+var ip = process.env.OPENSHIFT_NODESJS_IP || '127.0.0.1';
+var port = process.env.OPENSHIFT_NODESJS_PORT || 8000;
 // creating the server ( localhost:8000 )
-app.listen(8000);
+app.listen(port, ip);
 // server handler
 function handler(req, res) {
   readFile(url.parse(req.url).pathname, res);
